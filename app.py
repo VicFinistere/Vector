@@ -13,6 +13,18 @@ from anki_vector import connection
 from anki_vector.util import degrees
 
 
+def launch_cmd(command):
+    """
+    Launch command not yet implemented
+    :param command: Any valid command 
+    """
+    exec('import anki_vector')
+    exec('robot = anki_vector.Robot()')
+    exec('robot.connect()')
+    exec(command.replace(" ", ""))
+    exec('robot.disconnect()')
+
+
 def stop_motion():
     """
     Stop motion
